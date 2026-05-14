@@ -93,22 +93,7 @@ function HeroSection() {
             </AnimatedSection>
           </div>
           
-          {/* Product Image - Right */}
-          <AnimatedSection animation="scale" delay={300} className="relative hidden lg:block">
-            <div className="relative flex items-center justify-center">
-              <Image
-                src="/images/hero-coconut-product.jpg"
-                alt="Premium Desiccated Coconut Products"
-                width={480}
-                height={400}
-                className="relative z-10 rounded-2xl object-contain drop-shadow-2xl"
-                style={{ width: 'auto', height: 'auto' }}
-                priority
-              />
-              {/* Glow effect behind image */}
-              <div className="absolute inset-0 z-0 rounded-full bg-primary/20 blur-3xl" />
-            </div>
-          </AnimatedSection>
+
         </div>
       </div>
       
