@@ -1,26 +1,24 @@
-import { Routes, Route } from 'react-router-dom'
-import { LanguageProvider } from './lib/i18n'
-import Layout from './components/Layout'
-import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
-import ProductsPage from './pages/ProductsPage'
-import ContactPage from './pages/ContactPage'
-import BlogPage from './pages/BlogPage'
+import { Routes, Route } from 'react-router-dom';
+import { Header, Footer, WhatsAppButton } from './components';
+import { Home, About, Products, Contact, Blog } from './pages';
 
 function App() {
   return (
-    <LanguageProvider>
-      <Layout>
+    <div className="app">
+      <Header />
+      <main>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
-      </Layout>
-    </LanguageProvider>
-  )
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
+  );
 }
 
-export default App
+export default App;
